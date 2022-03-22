@@ -1,6 +1,13 @@
 name: build
 
 on:
+  workflow_dispatch:
+    paths-ignore:
+      - "**.md"
+      - "**.bbcode"
+      - LICENSE
+      - .github/FUNDING.yml
+    branches: [main]
   push:
     paths-ignore:
       - "**.md"
